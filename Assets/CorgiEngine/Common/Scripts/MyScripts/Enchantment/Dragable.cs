@@ -19,6 +19,7 @@ namespace KeyboardWarrior
         GameObject rayHitObject;
         DragState dragState;
         bool isDraging = false;
+        public string uiLabel;
 
         private void Start()
         {
@@ -57,14 +58,16 @@ namespace KeyboardWarrior
                     return;
                 }
             }
-            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), name)))
-            {
-                image.color = pressColor;
-            }
-            if (Input.GetKeyUp((KeyCode)System.Enum.Parse(typeof(KeyCode), name)))
-            {
-                image.color = defaultColor;
-            }
+        }
+
+        public void KeyPress()
+        {
+            image.color = pressColor;
+        }
+
+        public void KeyRelease()
+        {
+            image.color = defaultColor;
         }
 
         public void OnHover()

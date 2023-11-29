@@ -50,6 +50,40 @@ namespace KeyboardWarrior
             aUI.SetActive(keyboardManager.canUseA);
             sUI.SetActive(keyboardManager.canUseS);
             dUI.SetActive(keyboardManager.canUseD);
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                wUI.GetComponent<Dragable>().KeyPress();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                sUI.GetComponent<Dragable>().KeyPress();
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                aUI.GetComponent<Dragable>().KeyPress();
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                dUI.GetComponent<Dragable>().KeyPress();
+            }
+
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                wUI.GetComponent<Dragable>().KeyRelease();
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                sUI.GetComponent<Dragable>().KeyRelease();
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                aUI.GetComponent<Dragable>().KeyRelease();
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                dUI.GetComponent<Dragable>().KeyRelease();
+            }
         }
     }
 }
