@@ -4,8 +4,13 @@ using UnityEngine;
 
 namespace KeyboardWarrior
 {
-    public class PlayerManager : Singleton<PlayerManager>
+    public class PlayerManager : MonoBehaviour
     {
         public PlayerKeyboardManager keyboardManager;
+
+        private void Awake()
+        {
+            keyboardManager = GetComponent<PlayerKeyboardManager>();
+        }
     }
 }

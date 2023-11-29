@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace KeyboardWarrior
 {
-    public class PlayerKeyboardManager : MonoBehaviour
+    public class PlayerKeyboardManager : MonoBehaviour 
     {
         public bool canUseW = true;
         public bool canUseA = true;

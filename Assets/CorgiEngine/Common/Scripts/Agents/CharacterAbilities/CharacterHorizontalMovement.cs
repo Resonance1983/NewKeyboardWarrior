@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using KeyboardWarrior;
 using UnityEditor;
 
 namespace MoreMountains.CorgiEngine
@@ -19,8 +20,8 @@ namespace MoreMountains.CorgiEngine
 
 		/// the current reference movement speed
 		public float MovementSpeed { get; set; }
-
-		[Header("Speed")]
+		PlayerManager playerManager;
+        [Header("Speed")]
 
 		/// the speed of the character when it's walking
 		[Tooltip("the speed of the character when it's walking")]
@@ -108,6 +109,7 @@ namespace MoreMountains.CorgiEngine
 		protected override void Initialization()
 		{
 			base.Initialization ();
+			playerManager = GetComponent<PlayerManager>();
 			MovementSpeed = WalkSpeed;
 			MovementSpeedMultiplier = 1f;
 			AbilityMovementSpeedMultiplier = 1f;
@@ -138,8 +140,9 @@ namespace MoreMountains.CorgiEngine
 			}
 
 			_horizontalMovement = _horizontalInput;
-
-			if ((AirControl < 1f) 
+            if (!playerManager.keyboardManager.canUseA) _horizontalMovement = _horizontalMovement < 0 ? 0 : _horizontalMovement;
+            if (!playerManager.keyboardManager.canUseD) _horizontalMovement = _horizontalMovement > 0 ? 0 : _horizontalMovement;
+            if ((AirControl < 1f) 
 			    && !_controller.State.IsGrounded
 			    && (_character.MovementState.CurrentState != CharacterStates.MovementStates.WallClinging))
 			{
@@ -162,6 +165,7 @@ namespace MoreMountains.CorgiEngine
 		/// <param name="value">Horizontal move value, between -1 and 1 - positive : will move to the right, negative : will move left </param>
 		public virtual void SetHorizontalMove(float value)
 		{
+
 			_horizontalMovement = value;
 		}
 
