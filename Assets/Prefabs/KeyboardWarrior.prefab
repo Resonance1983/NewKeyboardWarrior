@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114000011047386926}
   - component: {fileID: 5820884110940943423}
   - component: {fileID: 2323655756970427588}
+  - component: {fileID: -4763113850693895810}
+  - component: {fileID: -1114524908841957435}
   m_Layer: 9
   m_Name: KeyboardWarrior
   m_TagString: Player
@@ -349,7 +351,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  NumberOfJumps: 3
+  NumberOfJumps: 1
   JumpHeight: 3
   JumpRestrictions: 0
   ResetCameraOffsetOnJump: 0
@@ -449,6 +451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyboardManager: {fileID: 0}
+  skillManager: {fileID: 0}
+  dragManager: {fileID: 0}
 --- !u!114 &2323655756970427588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +469,39 @@ MonoBehaviour:
   canUseA: 1
   canUseS: 1
   canUseD: 1
+--- !u!114 &-4763113850693895810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a542cbf885aad1249a09099e2aaa7826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeRadius: 100
+  returnRadius: 100
+  indicatorObject: {fileID: 0}
+  dragging: 0
+--- !u!114 &-1114524908841957435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827584f9fdc7f09439ab5b5aa355c307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wUI: {fileID: 0}
+  aUI: {fileID: 0}
+  sUI: {fileID: 0}
+  dUI: {fileID: 0}
+  enchantLastTime: 5
 --- !u!1 &159142
 GameObject:
   m_ObjectHideFlags: 0

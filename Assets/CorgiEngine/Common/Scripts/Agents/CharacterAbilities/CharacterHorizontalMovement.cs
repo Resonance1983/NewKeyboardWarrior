@@ -109,7 +109,6 @@ namespace MoreMountains.CorgiEngine
 		protected override void Initialization()
 		{
 			base.Initialization ();
-			playerManager = GetComponent<PlayerManager>();
 			MovementSpeed = WalkSpeed;
 			MovementSpeedMultiplier = 1f;
 			AbilityMovementSpeedMultiplier = 1f;
@@ -140,8 +139,8 @@ namespace MoreMountains.CorgiEngine
 			}
 
 			_horizontalMovement = _horizontalInput;
-            if (!playerManager.keyboardManager.canUseA) _horizontalMovement = _horizontalMovement < 0 ? 0 : _horizontalMovement;
-            if (!playerManager.keyboardManager.canUseD) _horizontalMovement = _horizontalMovement > 0 ? 0 : _horizontalMovement;
+            if (!PlayerManager.Instance.keyboardManager.canUseA) _horizontalMovement = _horizontalMovement < 0 ? 0 : _horizontalMovement;
+            if (!PlayerManager.Instance.keyboardManager.canUseD) _horizontalMovement = _horizontalMovement > 0 ? 0 : _horizontalMovement;
             if ((AirControl < 1f) 
 			    && !_controller.State.IsGrounded
 			    && (_character.MovementState.CurrentState != CharacterStates.MovementStates.WallClinging))

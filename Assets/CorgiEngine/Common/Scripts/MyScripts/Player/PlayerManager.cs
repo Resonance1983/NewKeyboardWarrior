@@ -4,13 +4,18 @@ using UnityEngine;
 
 namespace KeyboardWarrior
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : Singleton<PlayerManager>
     {
         public PlayerKeyboardManager keyboardManager;
+        public PlayerSkillManager skillManager;
+        public PlayerDragManager dragManager;
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             keyboardManager = GetComponent<PlayerKeyboardManager>();
+            skillManager = GetComponent<PlayerSkillManager>();
+            dragManager = GetComponent<PlayerDragManager>();
         }
     }
 }

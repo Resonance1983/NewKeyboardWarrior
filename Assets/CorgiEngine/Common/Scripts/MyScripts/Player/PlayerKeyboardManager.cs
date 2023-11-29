@@ -11,6 +11,14 @@ namespace KeyboardWarrior
         public bool canUseS = true;
         public bool canUseD = true;
 
+        public void UseKey(EnchantType eType)
+        {
 
+        }
+
+        public void UnuseKey(EnchantType eType)
+        {
+
+        }
     }
 }
