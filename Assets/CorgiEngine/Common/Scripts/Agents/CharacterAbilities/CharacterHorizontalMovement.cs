@@ -20,7 +20,6 @@ namespace MoreMountains.CorgiEngine
 
 		/// the current reference movement speed
 		public float MovementSpeed { get; set; }
-		PlayerManager playerManager;
         [Header("Speed")]
 
 		/// the speed of the character when it's walking

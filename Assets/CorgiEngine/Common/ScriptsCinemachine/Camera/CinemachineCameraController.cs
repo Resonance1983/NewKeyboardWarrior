@@ -26,7 +26,7 @@ namespace MoreMountains.CorgiEngine
 		public bool ConfineCameraToLevelBounds = true;
 		/// How high (or low) from the Player the camera should move when looking up/down
 		[Tooltip("How high (or low) from the Player the camera should move when looking up/down")]
-		public float ManualUpDownLookDistance = 3;
+		public float ManualUpDownLookDistance = 0;
 		/// the min and max speed to consider for this character (when dealing with the zoom)
 		[MMVector("Min", "Max")]
 		[Tooltip("the min and max speed to consider for this character (when dealing with the zoom)")]
