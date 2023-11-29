@@ -217,6 +217,15 @@ namespace MoreMountains.CorgiEngine
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""f7644427-b3ff-44f0-843f-de5974372524"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -230,28 +239,6 @@ namespace MoreMountains.CorgiEngine
                     ""action"": ""PrimaryMovement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""2e66d043-6153-419e-932e-0bbd8ef8df6b"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""PrimaryMovement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""f1c785e7-a3bf-4f5c-9d5a-2302a0b10975"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""PrimaryMovement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -276,6 +263,17 @@ namespace MoreMountains.CorgiEngine
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""down"",
+                    ""id"": ""b41f89f7-53a0-40f2-a055-6da10a9b29f0"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PrimaryMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""157de9f0-00a9-4767-9eca-18eb35914def"",
                     ""path"": ""<Gamepad>/leftStick"",
@@ -289,7 +287,7 @@ namespace MoreMountains.CorgiEngine
                 {
                     ""name"": """",
                     ""id"": ""8923c29f-eb06-45a4-9c25-5ed809d8fea2"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -692,6 +690,17 @@ namespace MoreMountains.CorgiEngine
                     ""action"": ""Roll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8eaec8d9-1fad-4d00-838b-4ec3700160f0"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -744,6 +753,7 @@ namespace MoreMountains.CorgiEngine
             m_PlayerControls_SwitchCharacter = m_PlayerControls.FindAction("SwitchCharacter", throwIfNotFound: true);
             m_PlayerControls_TimeControl = m_PlayerControls.FindAction("TimeControl", throwIfNotFound: true);
             m_PlayerControls_Roll = m_PlayerControls.FindAction("Roll", throwIfNotFound: true);
+            m_PlayerControls_Newaction = m_PlayerControls.FindAction("New action", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -826,6 +836,7 @@ namespace MoreMountains.CorgiEngine
         private readonly InputAction m_PlayerControls_SwitchCharacter;
         private readonly InputAction m_PlayerControls_TimeControl;
         private readonly InputAction m_PlayerControls_Roll;
+        private readonly InputAction m_PlayerControls_Newaction;
         public struct PlayerControlsActions
         {
             private @CorgiEngineInputActions m_Wrapper;
@@ -851,6 +862,7 @@ namespace MoreMountains.CorgiEngine
             public InputAction @SwitchCharacter => m_Wrapper.m_PlayerControls_SwitchCharacter;
             public InputAction @TimeControl => m_Wrapper.m_PlayerControls_TimeControl;
             public InputAction @Roll => m_Wrapper.m_PlayerControls_Roll;
+            public InputAction @Newaction => m_Wrapper.m_PlayerControls_Newaction;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -923,6 +935,9 @@ namespace MoreMountains.CorgiEngine
                 @Roll.started += instance.OnRoll;
                 @Roll.performed += instance.OnRoll;
                 @Roll.canceled += instance.OnRoll;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
 
             private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -990,6 +1005,9 @@ namespace MoreMountains.CorgiEngine
                 @Roll.started -= instance.OnRoll;
                 @Roll.performed -= instance.OnRoll;
                 @Roll.canceled -= instance.OnRoll;
+                @Newaction.started -= instance.OnNewaction;
+                @Newaction.performed -= instance.OnNewaction;
+                @Newaction.canceled -= instance.OnNewaction;
             }
 
             public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -1048,6 +1066,7 @@ namespace MoreMountains.CorgiEngine
             void OnSwitchCharacter(InputAction.CallbackContext context);
             void OnTimeControl(InputAction.CallbackContext context);
             void OnRoll(InputAction.CallbackContext context);
+            void OnNewaction(InputAction.CallbackContext context);
         }
     }
 }
