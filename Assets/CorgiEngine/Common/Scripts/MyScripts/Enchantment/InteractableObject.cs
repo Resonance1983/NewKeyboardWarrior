@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 namespace KeyboardWarrior
 {
     public class InteractableObject : MonoBehaviour
@@ -25,6 +26,7 @@ namespace KeyboardWarrior
         {
             currenttype = defaultType;
             eo = GetComponent<EnchantableObject>();
+            eo.currentEnchant = defaultType;
             enchantTimer = 0;
         }
 
@@ -43,7 +45,7 @@ namespace KeyboardWarrior
         {
             PlayerManager.Instance.skillManager.RetrieveEnchantment(currenttype);
             eo.BaseEvent();
-            if (returnToDefault) currenttype = defaultType;
+            if (returnToDefault) currenttype = defaultType; eo.currentEnchant = defaultType;
         }
 
         private void Update()
