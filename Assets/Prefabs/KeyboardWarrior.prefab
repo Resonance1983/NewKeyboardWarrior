@@ -180,7 +180,7 @@ MonoBehaviour:
     DisplayWarnings: 1
   PlatformMask:
     serializedVersion: 2
-    m_Bits: 33554688
+    m_Bits: 33554689
   MovingPlatformMask:
     serializedVersion: 2
     m_Bits: 262144
