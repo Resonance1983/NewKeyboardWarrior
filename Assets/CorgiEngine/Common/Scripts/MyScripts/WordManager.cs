@@ -12,7 +12,7 @@ namespace KeyboardWarrior
             public string word;
             public AudioClip audio;
         }
-
+        public static WordManager instance;
         AudioSource audioSource;
         AudioClip currentClip;
         public List<WordAndSound> words = new List<WordAndSound>();
@@ -30,6 +30,7 @@ namespace KeyboardWarrior
             for (int i = 1; i <= str.Length; i++)
             {
                 string newS = str[..i];
+                Debug.Log(newS);
                 foreach (WordAndSound ws in words)
                 {
                     ws.word.ToUpper();

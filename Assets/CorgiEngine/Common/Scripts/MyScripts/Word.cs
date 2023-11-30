@@ -6,7 +6,7 @@ namespace KeyboardWarrior
 {
     public class Word : MonoBehaviour
     {
-        WordManager wordManager;
+        [SerializeField] WordManager wordManager;
         public string letter;
 
         private void Start()
@@ -15,6 +15,11 @@ namespace KeyboardWarrior
         }
         private void Update()
         {
+            if (!wordManager)
+            {
+                wordManager = FindAnyObjectByType<WordManager>();
+                return;
+            }
             HorizontalDetection();
             VerticalDetection();
         }
@@ -52,13 +57,13 @@ namespace KeyboardWarrior
             List<GameObject> gos = new List<GameObject>();
             foreach (RaycastHit2D hit in hits)
             {
-                gos.Add(hit.collider.gameObject);
-
+                if (hit.collider.GetComponent<Word>())
+                    gos.Add(hit.collider.gameObject);
             }
             string finalStr = "";
             foreach (GameObject go in gos)
             {
-                finalStr += go.name;
+                finalStr += go.GetComponent<Word>().letter;
             }
 
             wordManager.CheckString(finalStr, gos);
