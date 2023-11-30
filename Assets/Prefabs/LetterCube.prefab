@@ -302,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentEnchant: 4
   enchanted: 0
-  moveSpeed: 0
+  moveSpeed: 1.5
 --- !u!114 &2489335638138448885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07cbc4de87c94a44bf43a57d956ceb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordManager: {fileID: 0}
   letter: 
 --- !u!1 &4541283871414500700
 GameObject:
