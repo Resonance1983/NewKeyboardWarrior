@@ -435,10 +435,10 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  DashDistance: 3
-  DashForce: 40
+  DashDistance: 5
+  DashForce: 10
   ResetForcesOnExit: 0
-  ForceExactDistance: 0
+  ForceExactDistance: 1
   DetachFromMovingPlatformsOnDash: 0
   Aim:
     AimControl: 2
