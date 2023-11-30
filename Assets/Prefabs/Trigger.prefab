@@ -308,7 +308,7 @@ MonoBehaviour:
   defaultType: 4
   currenttype: 4
   eo: {fileID: 0}
-  singleGO: 1
+  singleGO: 0
   returnToDefault: 1
   enchantTimer: 0
 --- !u!114 &6547840976716813355
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4a031518b3de1418df80bba9cdd109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentEnchant: 0
+  currentEnchant: 4
   enchanted: 0
 --- !u!50 &7297757483828019953
 Rigidbody2D:

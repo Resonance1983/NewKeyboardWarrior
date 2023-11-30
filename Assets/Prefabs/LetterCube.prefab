@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8968131625413906582}
   - component: {fileID: 4425677455063948277}
   - component: {fileID: 2489335638138448885}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: LetterCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

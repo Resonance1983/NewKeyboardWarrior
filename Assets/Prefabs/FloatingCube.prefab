@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4695942604253891246}
   - component: {fileID: 5128909906210243896}
   - component: {fileID: 3432659124313081449}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: FloatingCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
