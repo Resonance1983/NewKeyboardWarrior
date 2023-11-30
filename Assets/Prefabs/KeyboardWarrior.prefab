@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 11431242}
   - component: {fileID: 11455680}
   - component: {fileID: 114000012565017190}
-  - component: {fileID: 114000011047386926}
   - component: {fileID: -4562992364438268067}
   - component: {fileID: 5820884110940943423}
   - component: {fileID: 2323655756970427588}
@@ -111,7 +110,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -124,7 +123,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &11469900
 MonoBehaviour:
@@ -418,30 +417,6 @@ MonoBehaviour:
   BlockingWeaponStates: 
   PreventJumpWhenInZone: 1
   ActivationCooldownDuration: 0
---- !u!114 &114000011047386926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0677e4e697adcd840b838146b8b282d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  ButtonBased: 0
-  CanPush: 1
-  CanPull: 1
-  PushWhenGroundedOnly: 1
-  DetectionRaycastLength: 0.2
-  MinimumPushSpeed: 0.05
 --- !u!114 &-4562992364438268067
 MonoBehaviour:
   m_ObjectHideFlags: 0
