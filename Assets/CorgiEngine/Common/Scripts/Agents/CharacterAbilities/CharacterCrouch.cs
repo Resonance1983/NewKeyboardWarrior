@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
+using KeyboardWarrior;
 
 namespace MoreMountains.CorgiEngine
 {	
@@ -89,6 +90,7 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected override void HandleInput()
 		{
+			if (!PlayerManager.Instance.keyboardManager.canUseS) return;
 			// Crouch Detection : if the player is pressing "down" and if the character is grounded and the crouch action is enabled
 			if (_verticalInput < -_inputManager.Threshold.y) 				
 			{

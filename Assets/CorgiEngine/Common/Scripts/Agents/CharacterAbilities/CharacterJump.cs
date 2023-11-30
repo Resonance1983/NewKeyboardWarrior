@@ -3,6 +3,7 @@ using System.Collections;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
 using UnityEngine.Serialization;
+using KeyboardWarrior;
 
 namespace MoreMountains.CorgiEngine
 {
@@ -213,6 +214,7 @@ namespace MoreMountains.CorgiEngine
 		protected override void HandleInput()
 		{
 			// we handle regular button presses
+			if (!PlayerManager.Instance.keyboardManager.canUseW) return;
 			if (_inputManager.JumpButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
 			{
 				JumpStart();
