@@ -355,7 +355,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   NumberOfJumps: 1
-  JumpHeight: 1.5
+  JumpHeight: 2
   JumpRestrictions: 0
   ResetCameraOffsetOnJump: 0
   CanJumpDownOneWayPlatforms: 1
@@ -436,7 +436,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   DashDistance: 5
-  DashForce: 10
+  DashForce: 15
   ResetForcesOnExit: 0
   ForceExactDistance: 1
   DetachFromMovingPlatformsOnDash: 0
