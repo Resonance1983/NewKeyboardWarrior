@@ -36,6 +36,7 @@ namespace KeyboardWarrior
         public override void BaseEvent()
         {
             base.BaseEvent();
+            Debug.Log("");
         }
 
         private void Update()
