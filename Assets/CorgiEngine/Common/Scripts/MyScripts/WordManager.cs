@@ -31,6 +31,7 @@ namespace KeyboardWarrior
             {
                 string newS = str[..i];
                 Debug.Log(newS);
+                newS = newS.ToUpper();
                 foreach (WordAndSound ws in words)
                 {
                     ws.word.ToUpper();

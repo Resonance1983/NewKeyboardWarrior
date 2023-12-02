@@ -34,6 +34,7 @@ namespace KeyboardWarrior
 
         [Header("Letter Phase")]
         public float letterPhaseTime = 5f;
+        int letterGenetated = 0;
 
         [Header("Laser Phase")]
         public float laserPosTime = 1f;
@@ -48,6 +49,7 @@ namespace KeyboardWarrior
             currentState = defaultState;
             laserController = laserGenerator.GetComponent<LaserController>();
             letterGenerator = typeWriter.GetComponent<LetterGenerator>();
+            letterGenetated = 0;
             StartCoroutine(IntroProcess());
         }
 
@@ -91,6 +93,7 @@ namespace KeyboardWarrior
 
         IEnumerator LetterProcess()
         {
+            letterGenetated++;
             letterGenerator.GenerateLetter();
             yield return new WaitForSeconds(letterPhaseTime);
             currentState = BossStates.Laser;
@@ -99,8 +102,11 @@ namespace KeyboardWarrior
 
         IEnumerator LaserProcess()
         {
-            laserController.RandomPosition();
-            yield return new WaitForSeconds(laserPosTime);
+            for (int i = 0 ; i < letterGenetated; i++)
+            {
+                laserController.RandomPosition();
+                yield return new WaitForSeconds(laserPosTime);
+            }
             laserController.LaserReady();
             yield return new WaitForSeconds(laserPrepTime);
             laserController.EnableLaser();

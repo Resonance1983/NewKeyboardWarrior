@@ -12,6 +12,7 @@ namespace KeyboardWarrior
         private void Start()
         {
             wordManager = FindObjectOfType<WordManager>();
+            letter = letter.ToUpper();
         }
         private void Update()
         {
