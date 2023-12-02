@@ -12,20 +12,31 @@ namespace KeyboardWarrior
         public GameObject startVFX;
         public GameObject endVFX;
 
+        public List<ParticleSystem> startParticles;
         public List<ParticleSystem> particleSystems;
+
+        public GameObject laserTarget;
+        public List<Transform> laserPosList;
+        SpriteRenderer sprite;
 
         private void Start()
         {
+            sprite = GetComponent<SpriteRenderer>();
             lineRenderer = GetComponentInChildren<LineRenderer>();
             if (startVFX && endVFX)
             {
                 FillLists();
             }
             DisableLaser();
+            RandomPosition();
         }
 
         private void Update()
         {
+            if (sprite && laserTarget)
+            {
+                transform.right = laserTarget.transform.position - transform.position;
+            }
             if (Input.GetKeyDown(KeyCode.L))
             {
                 EnableLaser();
@@ -35,7 +46,7 @@ namespace KeyboardWarrior
                 DisableLaser();
             }
             if (!lineRenderer.enabled) return;
-            RaycastHit2D hit = Physics2D.Raycast(muzzle.position, muzzle.right, 1000f);
+            RaycastHit2D hit = Physics2D.Raycast(muzzle.position, laserTarget.transform.position - transform.position, 1000f);
             Vector2 start = muzzle.position;
             Vector2 end = start;
             
@@ -53,6 +64,13 @@ namespace KeyboardWarrior
             lineRenderer.SetPosition(1, end);
         }
 
+        public void LaserReady()
+        {
+            foreach (ParticleSystem ps in startParticles)
+            {
+                ps.Play();
+            }
+        }
         void FillLists()
         {
             for(int i = 0; i < startVFX.transform.childCount; i++)
@@ -60,6 +78,7 @@ namespace KeyboardWarrior
                 var ps = startVFX.transform.GetChild(i).GetComponent<ParticleSystem>();
                 if (ps != null)
                 {
+                    startParticles.Add(ps);
                     particleSystems.Add(ps);
                 }
             }
@@ -90,6 +109,13 @@ namespace KeyboardWarrior
             {
                 ps.Stop();
             }
+        }
+
+        public void RandomPosition()
+        {
+            int rand = Random.Range(0, laserPosList.Count-1);
+
+            transform.position = laserPosList[rand].position;
         }
     }
 }

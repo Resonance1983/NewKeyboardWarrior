@@ -12,11 +12,8 @@ namespace KeyboardWarrior
         public int letterIndex;
         public bool levelEnd = false;
         public float generateInterval = 3f;
-        private void Start()
-        {
-            StartCoroutine(WordGeneration());
-        }
-        public void GenerateWorld()
+
+        public void GenerateLetter()
         {
             Word newLetter = new Word();
             if (letterIndex < letters.Count-1) 
@@ -25,7 +22,7 @@ namespace KeyboardWarrior
             }
             else if (letterIndex == letters.Count-1)
             {
-                newLetter = Instantiate(playerLetter, transform.position, Quaternion.identity);
+                //newLetter = Instantiate(playerLetter, transform.position, Quaternion.identity);
                 BroadcastMessage("Rickroll");
             }
             newLetter.letter = letters[letterIndex];
@@ -40,15 +37,6 @@ namespace KeyboardWarrior
             else
             {
                 levelEnd = true;
-            }
-        }
-
-        IEnumerator WordGeneration()
-        {
-            while (!levelEnd)
-            {
-                GenerateWorld() ;
-                yield return new WaitForSeconds(generateInterval);
             }
         }
     }
