@@ -1129,6 +1129,12 @@ Transform:
   - {fileID: 2516126667387678562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935804447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6740172354033285273, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4585194970928402280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &987289602 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8600527661028656881, guid: 216a1e2f09ec2914cbabff8b976221f6,
@@ -1342,6 +1348,55 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 141681129}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1198813172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198813174}
+  - component: {fileID: 1198813173}
+  m_Layer: 0
+  m_Name: Endgame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1198813173
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198813172}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 9f5bef017d59e584faf6afd114773841, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1198813174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198813172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1317969706
@@ -1873,6 +1928,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1757029485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1812476595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 561835830518709542, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4585194970928402280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &1812476598
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812476595}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e20600640d51eb943ab1d9871276ab9b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 4443157486609390025, guid: e20600640d51eb943ab1d9871276ab9b, type: 2}
+    value: {fileID: 935804447}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1901586138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6202765678827635909, guid: de280474cd9213f4ba113ce17a170921,
@@ -2487,7 +2567,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1757029486}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 561835830518709542, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1812476598}
   m_SourcePrefab: {fileID: 100100000, guid: bbb3dbf35e0a71244906ce5d602fb50a, type: 3}
 --- !u!4 &4585194970928402281 stripped
 Transform:
@@ -3107,3 +3191,4 @@ SceneRoots:
   - {fileID: 4585194970928402280}
   - {fileID: 1673524585}
   - {fileID: 677997367}
+  - {fileID: 1198813174}
