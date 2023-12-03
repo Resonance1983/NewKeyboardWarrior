@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace KeyboardWarrior
 {
@@ -8,7 +9,8 @@ namespace KeyboardWarrior
     [RequireComponent(typeof(Collider2D))]
     public class Bean : MonoBehaviour
     {
-        public AudioClip audioOnCollect;
+        // public AudioClip audioOnCollect;
+        private bool GetBean = false;
         private void Awake()
         {
             GetComponent<Collider2D>().isTrigger = true;
@@ -21,10 +23,19 @@ namespace KeyboardWarrior
                 {
                     BeanCounter.Instance.GetBean();
                 }
-                if (audioOnCollect) GetComponent<AudioSource>().PlayOneShot(audioOnCollect);
-                gameObject.SetActive(false);
+                GetComponent<AudioSource>().Play();
+                if (!GetBean) GetBean = true;
+                
             }
         }
+
+        void Update(){
+            if(GetBean)
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            if(!GetComponent<AudioSource>().isPlaying && GetBean)
+                gameObject.SetActive(false);
+        }
+
     }
 }
 

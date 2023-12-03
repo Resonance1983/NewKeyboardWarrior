@@ -8,11 +8,12 @@ namespace KeyboardWarrior
     public class BeanCounter : Singleton<BeanCounter>
     {
         [Tooltip("current bean")]
-        public int counter;
+        [SerializeField]
+        private int counter;
         [Tooltip("target number of beans")]
         public int targetCount = 26;
 
-        public bool enoughBean = false;
+        private bool enoughBean = false;
         protected override void Awake()
         {
             base.Awake();
