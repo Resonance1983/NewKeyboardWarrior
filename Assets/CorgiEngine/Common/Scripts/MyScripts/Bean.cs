@@ -24,14 +24,11 @@ namespace KeyboardWarrior
                     BeanCounter.Instance.GetBean();
                 }
                 GetComponent<AudioSource>().Play();
-                if (!GetBean) GetBean = true;
-                
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
 
         void Update(){
-            if(GetBean)
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
             if(!GetComponent<AudioSource>().isPlaying && GetBean)
                 gameObject.SetActive(false);
         }

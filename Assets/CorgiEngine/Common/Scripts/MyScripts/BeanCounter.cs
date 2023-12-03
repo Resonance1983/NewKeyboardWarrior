@@ -9,7 +9,7 @@ namespace KeyboardWarrior
     {
         [Tooltip("current bean")]
         [SerializeField]
-        private int counter;
+        public int counter;
         [Tooltip("target number of beans")]
         public int targetCount = 26;
 
