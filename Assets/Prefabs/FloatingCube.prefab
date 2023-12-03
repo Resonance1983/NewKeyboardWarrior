@@ -537,7 +537,7 @@ MonoBehaviour:
   defaultType: 4
   currenttype: 4
   eo: {fileID: 0}
-  singleGO: 1
+  singleGO: 0
   returnToDefault: 1
   enchantTimer: 0
 --- !u!61 &4695942604253891246

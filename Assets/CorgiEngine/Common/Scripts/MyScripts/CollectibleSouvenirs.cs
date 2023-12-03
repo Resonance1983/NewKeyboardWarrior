@@ -24,6 +24,10 @@ namespace KeyboardWarrior
             if (collision.gameObject == PlayerManager.Instance.gameObject && coinSprite.active == true)
             {
                 audioSource.Play(0);
+                if (CoinManager.Instance)
+                {
+                    CoinManager.Instance.GetCoin();
+                }
                 coinSprite.active = false;
             }
         }
