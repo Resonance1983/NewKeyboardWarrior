@@ -14,6 +14,7 @@ namespace KeyboardWarrior
         public int targetCount = 26;
 
         private bool enoughBean = false;
+        public LevelEndPortal endLevelPortal;
         protected override void Awake()
         {
             base.Awake();
@@ -25,6 +26,7 @@ namespace KeyboardWarrior
             if (counter >= targetCount)
             {
                 enoughBean = true;
+                endLevelPortal.gameObject.SetActive(true);
             }
         }
     }
