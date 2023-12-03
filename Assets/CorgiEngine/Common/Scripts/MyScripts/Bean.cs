@@ -15,7 +15,7 @@ namespace KeyboardWarrior
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.tag.ToLower() == "player")
+            if (collision.gameObject == PlayerManager.Instance.gameObject)
             {
                 if (BeanCounter.Instance)
                 {
