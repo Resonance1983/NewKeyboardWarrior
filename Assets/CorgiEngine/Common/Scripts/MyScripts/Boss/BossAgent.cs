@@ -35,6 +35,7 @@ namespace KeyboardWarrior
         [Header("Letter Phase")]
         public float letterPhaseTime = 5f;
         int letterGenetated = 0;
+        public float minPosTime = 0.2f;
 
         [Header("Laser Phase")]
         public float laserPosTime = 1f;
@@ -43,6 +44,9 @@ namespace KeyboardWarrior
 
         [Header("Death Phase")]
         public float deathPhaseTime = 5f;
+
+        [Header("Triggers")]
+        public List<EnchantTrigger> enchantTriggers;
 
         private void Start()
         {
@@ -102,10 +106,12 @@ namespace KeyboardWarrior
 
         IEnumerator LaserProcess()
         {
+            float tempPosTime = laserPosTime / letterGenetated;
+            if (tempPosTime < minPosTime) tempPosTime = minPosTime;
             for (int i = 0 ; i < letterGenetated; i++)
             {
                 laserController.RandomPosition();
-                yield return new WaitForSeconds(laserPosTime);
+                yield return new WaitForSeconds(tempPosTime);
             }
             laserController.LaserReady();
             yield return new WaitForSeconds(laserPrepTime);
@@ -120,6 +126,14 @@ namespace KeyboardWarrior
         {
             yield return new WaitForSeconds(deathPhaseTime);
             Destroy(gameObject);
+        }
+
+        void RandomTriggerDirection()
+        {
+            foreach (EnchantTrigger trigger in enchantTriggers)
+            {
+                trigger.RandomDirection();
+            }
         }
     }
 }

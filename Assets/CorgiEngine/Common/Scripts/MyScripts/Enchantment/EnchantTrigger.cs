@@ -21,6 +21,11 @@ namespace KeyboardWarrior
                 io.OnEnchant(currentEnchant);
             }
         }
+
+        public void RandomDirection()
+        {
+
+        }
     }
 }
 

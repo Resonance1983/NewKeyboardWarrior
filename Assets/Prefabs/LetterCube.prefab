@@ -214,7 +214,7 @@ MonoBehaviour:
   currenttype: 4
   eo: {fileID: 0}
   singleGO: 1
-  returnToDefault: 1
+  returnToDefault: 0
   enchantTimer: 0
 --- !u!61 &2108515448101582311
 BoxCollider2D:
