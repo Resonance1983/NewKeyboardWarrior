@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MoreMountains.CorgiEngine;
 
 namespace KeyboardWarrior
 {
@@ -12,8 +13,7 @@ namespace KeyboardWarrior
         {
             if (realDeathCollider && collision.gameObject == PlayerManager.Instance.gameObject)
             {
-
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
             }
         }
     }
