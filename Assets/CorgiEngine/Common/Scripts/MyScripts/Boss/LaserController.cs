@@ -1,3 +1,4 @@
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace KeyboardWarrior
         public GameObject laserTarget;
         public List<Transform> laserPosList;
         SpriteRenderer sprite;
+        [SerializeField]GameObject currentHit;
 
         private void Start()
         {
@@ -29,6 +31,7 @@ namespace KeyboardWarrior
             }
             DisableLaser();
             RandomPosition();
+            laserTarget = PlayerManager.Instance.gameObject;
         }
 
         private void Update()
@@ -36,14 +39,6 @@ namespace KeyboardWarrior
             if (sprite && laserTarget)
             {
                 transform.right = laserTarget.transform.position - transform.position;
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                EnableLaser();
-            }
-            if (Input.GetKeyUp(KeyCode.L))
-            {
-                DisableLaser();
             }
             if (!lineRenderer.enabled) return;
             RaycastHit2D hit = Physics2D.Raycast(muzzle.position, laserTarget.transform.position - transform.position, 1000f);
@@ -53,10 +48,12 @@ namespace KeyboardWarrior
             if (hit.collider != null)
             {
                 end = hit.point;
+                currentHit = hit.collider.gameObject;
             }
             else
             {
                 end.x += 1000;
+                currentHit = null;
             }
             startVFX.transform.position = start;
             endVFX.transform.position = end;
@@ -104,11 +101,23 @@ namespace KeyboardWarrior
 
         public void DisableLaser()
         {
+            if (currentHit != null)
+            {
+                if (currentHit.GetComponent<Word>())
+                {
+                    Destroy(currentHit);
+                }
+                if (currentHit.GetComponent<Health>())
+                {
+                    Debug.Log("Hit Player");
+                    currentHit.GetComponent<Health>().Damage(100f, this.gameObject, 0, 0, Vector3.zero);
+                }
+            }
             lineRenderer.enabled=false;
             foreach (ParticleSystem ps in particleSystems)
             {
                 ps.Stop();
-            }
+            } 
         }
 
         public void RandomPosition()

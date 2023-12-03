@@ -97,9 +97,12 @@ namespace KeyboardWarrior
 
         IEnumerator LetterProcess()
         {
-            letterGenetated++;
-            letterGenerator.GenerateLetter();
-            yield return new WaitForSeconds(letterPhaseTime);
+            for (int i = 0; i < 3 ; i++)
+            {
+                letterGenetated++;
+                letterGenerator.GenerateLetter();
+                yield return new WaitForSeconds(letterPhaseTime/3);
+            }     
             currentState = BossStates.Laser;
             inLetterProcess = false;
         }
