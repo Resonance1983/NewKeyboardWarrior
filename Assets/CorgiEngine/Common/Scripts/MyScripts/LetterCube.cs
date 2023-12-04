@@ -62,7 +62,7 @@ namespace KeyboardWarrior
                     break;
             }
             rb.velocity = velocity * moveSpeed;
-            transform.localScale = scale;
+            //transform.localScale = scale;
         }
     }
 }
