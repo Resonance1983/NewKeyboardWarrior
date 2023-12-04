@@ -63,6 +63,11 @@ namespace KeyboardWarrior
         IEnumerator EndGameProcess()
         {
             // boss fight ends
+            LetterCube[] letterCubes = FindObjectsOfType<LetterCube>();
+            foreach (LetterCube letter in letterCubes)
+            {
+                Destroy(letter.gameObject);
+            }
             bgmAudioSource.Stop();
             bgmAudioSource.loop = false;
             bgmAudioSource.clip = tbcClip;
