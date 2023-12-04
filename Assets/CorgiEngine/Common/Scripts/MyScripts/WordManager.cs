@@ -41,7 +41,8 @@ namespace KeyboardWarrior
                     if (ws.word == newS)
                     {
                         BroadcastMessage("WordMatched");
-                        FindObjectOfType<BossAgent>().OnWordForm();
+                        if (FindObjectOfType<BossAgent>())
+                            FindObjectOfType<BossAgent>().OnWordForm();
                         if (ws.audio)
                         {
                             currentClip = ws.audio;

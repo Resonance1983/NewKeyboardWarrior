@@ -1,7 +1,9 @@
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace KeyboardWarrior
 {
@@ -17,6 +19,7 @@ namespace KeyboardWarrior
         public GameObject whiteKeyboard;
         public GameObject goldKeyboard;
         public GameObject blackhole;
+        public int blackKKLayerID;
 
         [Header("Cutscene Related Waypoints")]
         public Transform centerPoint;
@@ -31,6 +34,10 @@ namespace KeyboardWarrior
         public PlayableDirector director;
         public AudioClip tbcClip;
         public AudioSource bgmAudioSource;
+
+        public GameObject keyboardShineUI;
+        public GameObject bossSpeechUI;
+        public GameObject endgameUI;
 
         public bool debug = false;
 
@@ -63,11 +70,19 @@ namespace KeyboardWarrior
         IEnumerator EndGameProcess()
         {
             // boss fight ends
+            InputManager.Instance.InputDetectionActive = false;
+            endgameUI.SetActive(true);
             LetterCube[] letterCubes = FindObjectsOfType<LetterCube>();
             foreach (LetterCube letter in letterCubes)
             {
                 Destroy(letter.gameObject);
             }
+            EnchantTrigger[] triggers = FindObjectsOfType<EnchantTrigger>();
+            foreach (EnchantTrigger trigger in triggers)
+            {
+                Destroy(trigger.gameObject);
+            }
+
             bgmAudioSource.Stop();
             bgmAudioSource.loop = false;
             bgmAudioSource.clip = tbcClip;
@@ -79,21 +94,25 @@ namespace KeyboardWarrior
             // a new KK appears in the center
             newKK.SetActive(true);
             newKK.transform.position = centerPoint.position;
+            bossSpeechUI.SetActive(true);
             yield return new WaitForSeconds(1f);
             // lasers appear around the scene
+            keyboardShineUI.SetActive(true);
             foreach (GameObject go in lasers)
             {
                 go.SetActive(true);
                 yield return new WaitForSeconds(1f);
             }
+            bossSpeechUI.SetActive(false);
             // lasers are ready to fire
             foreach (ParticleSystem ps in laserStartEffects)
             {
                 ps.Play();
             }
             yield return new WaitForSeconds(2f);
+            keyboardShineUI.SetActive(false);
             // A keyboard appears and start moving to the center
-            GameObject keyboardObj = CoinManager.Instance.enoughCoinForGoldKeyboard ? goldKeyboard : whiteKeyboard;
+            GameObject keyboardObj = CoinManager.Instance && CoinManager.Instance.enoughCoinForGoldKeyboard ? goldKeyboard : whiteKeyboard;
             keyboardObj.SetActive(true);
             keyboardObj.transform.position = keyboardStart.position;
             keyboardObj.GetComponent<Rigidbody2D>().velocity = Vector2.up * 1f;
@@ -102,8 +121,9 @@ namespace KeyboardWarrior
             {
                 yield return null;
             }
+            Debug.Log(newKK.GetComponentInChildren<SpriteRenderer>().sortingLayerID);
             keyboardObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             //Blackhole appears
             blackhole.SetActive(true);
             // All the lasers move towards the keyboard
@@ -130,6 +150,14 @@ namespace KeyboardWarrior
             WASD_New.SetActive(true);
             WASD.SetActive(false);
             director.Play();
+            yield return new WaitForSeconds(8f);
+            float defaultVolume = bgmAudioSource.volume;
+            for (float i = defaultVolume; i > 0; i -= Time.deltaTime * defaultVolume / 2f)
+            {
+                bgmAudioSource.volume = i;
+                yield return null;
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 }

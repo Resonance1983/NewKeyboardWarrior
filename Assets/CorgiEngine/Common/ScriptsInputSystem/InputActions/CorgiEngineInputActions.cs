@@ -440,28 +440,6 @@ namespace MoreMountains.CorgiEngine
                 },
                 {
                     ""name"": """",
-                    ""id"": ""17af30da-1784-4cae-a214-838b1bc78a38"",
-                    ""path"": ""<Gamepad>/start"",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0edbe9a3-9973-478d-b677-437ae7b60275"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""4c3ea5cb-6737-4947-ba0f-12fe1143e541"",
                     ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": ""Press(behavior=2)"",

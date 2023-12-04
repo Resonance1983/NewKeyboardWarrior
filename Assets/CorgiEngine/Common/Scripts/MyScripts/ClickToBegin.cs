@@ -9,7 +9,7 @@ namespace KeyboardWarrior
     public class ClickToBegin : MonoBehaviour
     {
         public GameObject textObject;
-
+        public bool clickToStart = true;
         private void Start()
         {
             StartCoroutine(BlinkText());
@@ -17,7 +17,7 @@ namespace KeyboardWarrior
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && clickToStart)
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

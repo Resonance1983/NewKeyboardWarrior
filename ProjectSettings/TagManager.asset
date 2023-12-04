@@ -51,6 +51,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Keyboard
+    uniqueID: 3045131151
+    locked: 0
   - name: Between
     uniqueID: 606350985
     locked: 0

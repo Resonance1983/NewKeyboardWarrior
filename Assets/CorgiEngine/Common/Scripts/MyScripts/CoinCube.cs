@@ -8,7 +8,7 @@ namespace KeyboardWarrior
     {
         public GameObject coin;
 
-        public void OnDestroy()
+        public void OnCubeDestroy()
         {
             Instantiate(coin, transform.position, Quaternion.identity);
         }

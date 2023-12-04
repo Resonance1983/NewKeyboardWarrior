@@ -116,7 +116,7 @@ namespace KeyboardWarrior
                 }
                 if (currentHit.GetComponent<CoinCube>())
                 {
-                    currentHit.GetComponent<CoinCube>().OnDestroy();
+                    currentHit.GetComponent<CoinCube>().OnCubeDestroy();
                     Destroy(currentHit);
                 }
                 if (currentHit.GetComponent<Health>())

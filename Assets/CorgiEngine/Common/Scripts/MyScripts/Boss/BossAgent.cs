@@ -23,9 +23,13 @@ namespace KeyboardWarrior
         public int bossHealth = 5;
         public GameObject introKK;
         public AudioSource bgmSource;
+        public AudioClip rickrollClip;
+        public AudioClip duelClip;
+        public GameObject mechanicList;
         [Header("Boss Sub Objects")]
         public GameObject typeWriter;
         public GameObject laserGenerator;
+        public GameObject playerDialogue;
 
         [Header("Boss Skill References")]
         [SerializeField] LaserController laserController;
@@ -74,9 +78,32 @@ namespace KeyboardWarrior
             {
                 yield return null;
             }
-            typeWriter.SetActive(true);
-            laserGenerator.SetActive(true);
+            playerDialogue.SetActive(true);
+            bgmSource.clip = rickrollClip;
             bgmSource.Play();
+            while (playerDialogue.activeSelf)
+            {
+                yield return null;
+            }
+            mechanicList.SetActive(true);
+            float defaultVolume = bgmSource.volume;
+            for (float i = defaultVolume; i > 0; i -= Time.deltaTime * defaultVolume / 2f)
+            {
+                bgmSource.volume = i;
+                yield return null;
+            }
+            bgmSource.Stop();
+            bgmSource.clip = duelClip;
+            bgmSource.Play();
+            for (float i = 0; i <= defaultVolume; i += Time.deltaTime * defaultVolume / 2f)
+            {
+                bgmSource.volume = i;
+                yield return null;
+            } 
+            typeWriter.SetActive(true);
+            laserGenerator.SetActive(true);  
+            randomDir = FindObjectOfType<RandomDirTrigger>();
+            randomPos = FindObjectOfType<RandomPosTrigger>();
             currentState = BossStates.Letter;
         }
 
@@ -154,6 +181,15 @@ namespace KeyboardWarrior
         public void OnWordForm()
         {
             bossHealth--;
+            StartCoroutine(hitEffect());
+        }
+
+        IEnumerator hitEffect()
+        {
+            yield return null;
+            GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            yield return new WaitForSeconds(1f);
+            GetComponentInChildren<SpriteRenderer>().color = Color.white;
         }
     }
 }
