@@ -22,6 +22,7 @@ namespace KeyboardWarrior
 
         public int bossHealth = 5;
         public GameObject introKK;
+        public AudioSource bgmSource;
         [Header("Boss Sub Objects")]
         public GameObject typeWriter;
         public GameObject laserGenerator;
@@ -74,6 +75,7 @@ namespace KeyboardWarrior
             }
             typeWriter.SetActive(true);
             laserGenerator.SetActive(true);
+            bgmSource.Play();
             currentState = BossStates.Letter;
         }
 
