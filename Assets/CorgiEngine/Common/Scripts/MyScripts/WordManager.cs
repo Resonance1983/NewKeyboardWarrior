@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,8 @@ namespace KeyboardWarrior
         public float destroyDelay = 1.0f;
         public AudioClip rickroll;
         bool rickrolled = false;
+
+        public List<MMFeedbacks> wordMatchFeedbacks;
 
         private void Start()
         {
@@ -56,6 +59,10 @@ namespace KeyboardWarrior
         IEnumerator DestroyWord(List<GameObject> objs, int i)
         {
             yield return new WaitForSeconds(destroyDelay);
+            foreach (MMFeedbacks fb in wordMatchFeedbacks)
+            {
+                fb.PlayFeedbacks();
+            }
             for (int j = 0; j < i; j++)
             {
                 Destroy(objs[j]);
