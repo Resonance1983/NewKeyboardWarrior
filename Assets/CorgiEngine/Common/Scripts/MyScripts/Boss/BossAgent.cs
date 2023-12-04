@@ -82,13 +82,13 @@ namespace KeyboardWarrior
 
         private void Update()
         {
-            if (inLaserProcess || inLetterProcess || inDeathProcess)
-            {
-                return;
-            }
             if (bossHealth <= 0)
             {
                 currentState = BossStates.Death;
+            }
+            if (inLaserProcess || inLetterProcess || inDeathProcess)
+            {
+                return;
             }
             switch (currentState)
             {
