@@ -462,6 +462,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kunkun
       objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[0]
+      value: Thanks to you, I was able to collect all 26 typewriter buttons.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[1]
+      value: What, you mean Beans?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[2]
+      value: The Bean is a lie!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[3]
+      value: Why so serious?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[4]
+      value: Death is the only adventure you have left!
+      objectReference: {fileID: 0}
     - target: {fileID: 8305783127471920949, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: m_LocalPosition.x
