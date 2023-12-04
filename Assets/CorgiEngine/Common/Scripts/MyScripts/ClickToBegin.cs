@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 
 namespace KeyboardWarrior
@@ -14,9 +15,15 @@ namespace KeyboardWarrior
             StartCoroutine(BlinkText());
         }
 
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
         IEnumerator BlinkText()
         {
-            while (!Input.GetMouseButtonDown(0))
+            while (true)
             {
                 Debug.Log("Blink");
                 yield return new WaitForSeconds(1);
@@ -24,7 +31,7 @@ namespace KeyboardWarrior
                 yield return new WaitForSeconds(0.5f);
                 textObject.SetActive(true);
             }
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
     }
 }
