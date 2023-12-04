@@ -17089,6 +17089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
+      propertyPath: MessageDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
       propertyPath: Dialogue.Array.size
       value: 6
       objectReference: {fileID: 0}
