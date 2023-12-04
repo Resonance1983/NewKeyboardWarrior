@@ -726,6 +726,11 @@ PrefabInstance:
       propertyPath: letter
       value: U
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -978,6 +983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: G
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -1779,6 +1789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: O
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -11596,6 +11611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: N
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -57162,6 +57182,11 @@ PrefabInstance:
       propertyPath: letter
       value: E
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -57484,6 +57509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -62399,6 +62429,11 @@ PrefabInstance:
       propertyPath: letter
       value: G
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -62607,6 +62642,11 @@ PrefabInstance:
       propertyPath: letter
       value: Y
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -62691,6 +62731,11 @@ PrefabInstance:
       propertyPath: letter
       value: P
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -62774,6 +62819,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: I
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -63070,6 +63120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: V
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -67984,6 +68039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: R
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -94844,6 +94904,11 @@ PrefabInstance:
       propertyPath: letter
       value: N
       objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
       propertyPath: m_Name
@@ -95087,6 +95152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: N
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
@@ -105192,6 +105262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: letter
       value: E
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+      propertyPath: canDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6487611188355388640, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
