@@ -8,7 +8,6 @@ namespace KeyboardWarrior
     public class BeanCounter : Singleton<BeanCounter>
     {
         [Tooltip("current bean")]
-        [SerializeField]
         public int counter;
         [Tooltip("target number of beans")]
         public int targetCount = 26;
