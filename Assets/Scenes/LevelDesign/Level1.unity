@@ -1065,22 +1065,24 @@ PrefabInstance:
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[0]
-      value: Magic bubbles
+      value: It's Dangerous to Go Alone
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[1]
-      value: Try to touch it
+      value: 'That''s Magic bubbles
+
+        You''ll be seeing a lot of them'
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[2]
-      value: You can sacrifice your directions
+      value: Try to touch it
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
@@ -9777,44 +9779,44 @@ PrefabInstance:
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[0]
-      value: Keyboard Warrior
+      value: Keyboard Warrior,You have the power of keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[1]
-      value: You have the power of keys
+      value: You can use your Arrow Keys
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[2]
-      value: You can sacrifice your directions
-      objectReference: {fileID: 0}
-    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
-        type: 3}
-      propertyPath: Dialogue.Array.data[3]
       value: 'to change the direction of
 
         Cubes and Magic Bubbles'
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
-      propertyPath: Dialogue.Array.data[4]
+      propertyPath: Dialogue.Array.data[3]
       value: TEMPORARILY
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
+      propertyPath: Dialogue.Array.data[4]
+      value: I used to be an Keyboard Warrior like you
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
       propertyPath: Dialogue.Array.data[5]
-      value: Try to use you power
+      value: Then I took an arrow in my knee
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[6]
-      value: to use your power
+      value: Now, try to use you power!
       objectReference: {fileID: 0}
     - target: {fileID: 8305783127471920949, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
@@ -10924,22 +10926,22 @@ PrefabInstance:
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[0]
-      value: Letter Cubes
+      value: Friendship is Magic
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[1]
-      value: "Will disappear \nwhen they form a word"
+      value: Letter Cubes also have their firend
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: Dialogue.Array.data[2]
-      value: You can sacrifice your directions
+      value: They will disappear when they form a word
       objectReference: {fileID: 0}
     - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}

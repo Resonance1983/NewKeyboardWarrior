@@ -17087,6 +17087,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kunkun
       objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[0]
+      value: Oh! Looks like our old friend Pac-Man isn't here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[1]
+      value: The whole game world's turned into a mess!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[2]
+      value: Now, I need you to help me collect 26 missing Ke......Beans!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[3]
+      value: Why 26?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[4]
+      value: Because 26 is Answer to the Ultimate Question of Life, the Universe,
+        and Everything
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718462936219970907, guid: 5f64bc7cd116b0e4685f23338c9b401b,
+        type: 3}
+      propertyPath: Dialogue.Array.data[5]
+      value: Not 42!
+      objectReference: {fileID: 0}
     - target: {fileID: 8305783127471920949, guid: 5f64bc7cd116b0e4685f23338c9b401b,
         type: 3}
       propertyPath: m_LocalScale.x
