@@ -6500,85 +6500,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1001 &250448764
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2053352219}
-    m_Modifications:
-    - target: {fileID: 4817239955737664107, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_Name
-      value: WordManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6192286365519622128, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: destroyDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 46a3a50bf01025f4dba3eaf920a5bd01, type: 3}
---- !u!4 &250448765 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9102125828515591903, guid: 46a3a50bf01025f4dba3eaf920a5bd01,
-    type: 3}
-  m_PrefabInstance: {fileID: 250448764}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344689080
 GameObject:
   m_ObjectHideFlags: 0
@@ -67790,7 +67711,7 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 1354451052}
+  - m_Collider: {fileID: 8091455475185682904}
     m_ColliderPaths:
     - - X: 80000000
         Y: 50000000
@@ -67810,7 +67731,7 @@ CompositeCollider2D:
         Y: -50000000
       - X: 80000000
         Y: -50000000
-  - m_Collider: {fileID: 8091455475185682904}
+  - m_Collider: {fileID: 1354451052}
     m_ColliderPaths:
     - - X: 80000000
         Y: 50000000
@@ -103670,7 +103591,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 250448765}
   - {fileID: 125916644}
   - {fileID: 1125424406}
   - {fileID: 1090369333}
@@ -119641,6 +119561,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -12.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: letterPrefab
+      value: 
+      objectReference: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+    - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: playerLetter
+      value: 
+      objectReference: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
     - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
       propertyPath: letters.Array.size
