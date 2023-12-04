@@ -6,23 +6,42 @@ namespace KeyboardWarrior
 {
     public class LetterGenerator : MonoBehaviour
     {
-        public Word letterPrefab;
-        public Word playerLetter;
+        public LetterCube letterPrefab;
+        public LetterCube coinCubePrefab;
+        public Transform startPos;
         public List<string> letters;
         public int letterIndex;
         public bool levelEnd = false;
         public float generateInterval = 3f;
+        bool generatedCoinCube = false;
 
         public void GenerateLetter()
         {
-            Word newLetter = new Word();
+
+            LetterCube newLetter = new LetterCube();
             if (letterIndex < letters.Count) 
-            { 
-                newLetter = Instantiate(letterPrefab, transform.position, Quaternion.identity); 
+            {
+                if (!generatedCoinCube && CoinCube())
+                {
+                    newLetter = Instantiate(coinCubePrefab, startPos.position, Quaternion.identity);
+                }
+                else
+                {
+                    newLetter = Instantiate(letterPrefab, startPos.position, Quaternion.identity);
+                    newLetter.GetComponent<Word>().letter = letters[letterIndex];
+                }
             }
-            newLetter.letter = letters[letterIndex];
         }
 
+        public bool CoinCube()
+        {
+            float rand = Random.Range(0, 100f);
+            if (rand < 30)
+            {
+                return true;
+            }
+            return false;
+        }
         public void WordMatched()
         {
             if (letterIndex < letters.Count - 1)

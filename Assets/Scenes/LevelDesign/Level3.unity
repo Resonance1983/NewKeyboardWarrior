@@ -27236,6 +27236,37 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &552872154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552872155}
+  m_Layer: 0
+  m_Name: StartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552872155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552872154}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.447, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4585194970928402281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553103331
 GameObject:
   m_ObjectHideFlags: 0
@@ -121300,15 +121331,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
+      propertyPath: startPos
+      value: 
+      objectReference: {fileID: 552872155}
+    - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
       propertyPath: letterPrefab
       value: 
-      objectReference: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+      objectReference: {fileID: 5487115968270691029, guid: 9a47e622204b22e47ab81f646140bbcd,
         type: 3}
     - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
       propertyPath: playerLetter
       value: 
       objectReference: {fileID: 6036768837936421589, guid: 9a47e622204b22e47ab81f646140bbcd,
+        type: 3}
+    - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: coinCubePrefab
+      value: 
+      objectReference: {fileID: 5487115968270691029, guid: 2a1fcfb5229a438419f498f31b16c6d1,
         type: 3}
     - target: {fileID: 1051273228771584168, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
@@ -121583,6 +121625,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1757029486}
+    - targetCorrespondingSourceObject: {fileID: 5466006087152149951, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 552872155}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 561835830518709542, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
