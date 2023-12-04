@@ -25,6 +25,7 @@ namespace KeyboardWarrior
                 }
                 GetComponent<AudioSource>().Play();
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<Collider2D>().enabled = false;
             }
         }
 

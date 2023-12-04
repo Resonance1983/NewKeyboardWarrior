@@ -28,7 +28,8 @@ namespace KeyboardWarrior
                 {
                     CoinManager.Instance.GetCoin();
                 }
-                coinSprite.active = false;
+                coinSprite.SetActive(false);
+                GetComponent<Collider2D>().enabled = false;
             }
         }
 
