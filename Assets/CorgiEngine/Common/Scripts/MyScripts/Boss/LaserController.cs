@@ -20,6 +20,7 @@ namespace KeyboardWarrior
         public List<Transform> laserPosList;
         SpriteRenderer sprite;
         [SerializeField]GameObject currentHit;
+        public LayerMask ignoreLayer;
 
         private void Start()
         {
@@ -33,6 +34,11 @@ namespace KeyboardWarrior
             RandomPosition();      
         }
 
+        private void OnEnable()
+        {
+            DisableLaser();
+        }
+
         private void Update()
         {
             laserTarget = PlayerManager.Instance.gameObject;
@@ -41,7 +47,7 @@ namespace KeyboardWarrior
                 transform.right = laserTarget.transform.position - transform.position;
             }
             if (!lineRenderer.enabled) return;
-            RaycastHit2D hit = Physics2D.Raycast(muzzle.position, laserTarget.transform.position - transform.position, 1000f);
+            RaycastHit2D hit = Physics2D.Raycast(muzzle.position, laserTarget.transform.position - transform.position, 1000f, ~ignoreLayer);
             Vector2 start = muzzle.position;
             Vector2 end = start;
             

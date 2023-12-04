@@ -39,7 +39,7 @@ TagManager:
   - Pushables
   - Stairs
   - FloatingCube
-  - 
+  - IgnoreLaser
   - 
   m_SortingLayers:
   - name: Background

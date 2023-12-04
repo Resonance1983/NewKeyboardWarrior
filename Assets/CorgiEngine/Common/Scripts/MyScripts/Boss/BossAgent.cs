@@ -1,3 +1,4 @@
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace KeyboardWarrior
         bool inDeathProcess = false;
 
         public int bossHealth = 5;
-
+        public GameObject introKK;
         [Header("Boss Sub Objects")]
         public GameObject typeWriter;
         public GameObject laserGenerator;
@@ -64,7 +65,15 @@ namespace KeyboardWarrior
 
         IEnumerator IntroProcess()
         {
-            yield return new WaitForSeconds(introPhaseTime); //Do Something
+            typeWriter.SetActive(false);
+            laserGenerator.SetActive(false);
+            introKK.SetActive(true);
+            while (introKK.activeSelf)
+            {
+                yield return null;
+            }
+            typeWriter.SetActive(true);
+            laserGenerator.SetActive(true);
             currentState = BossStates.Letter;
         }
 
@@ -145,6 +154,11 @@ namespace KeyboardWarrior
             {
                 trigger.RandomDirection();
             }
+        }
+
+        public void OnWordForm()
+        {
+            bossHealth--;
         }
     }
 }
