@@ -121094,6 +121094,11 @@ PrefabInstance:
       objectReference: {fileID: 7834551240425132648}
     - target: {fileID: 2301485972499652686, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 4585194970928402283}
+    - target: {fileID: 2301485972499652686, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
       propertyPath: ignoreLayer.m_Bits
       value: 1073741824
       objectReference: {fileID: 0}
@@ -121335,6 +121340,12 @@ Transform:
 --- !u!4 &4585194970928402282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4333144023928606827, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4585194970928402280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &4585194970928402283 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 8641532930169225601, guid: bbb3dbf35e0a71244906ce5d602fb50a,
     type: 3}
   m_PrefabInstance: {fileID: 4585194970928402280}
   m_PrefabAsset: {fileID: 0}
