@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace KeyboardWarrior
 {
@@ -22,6 +23,13 @@ namespace KeyboardWarrior
         public Transform keyboardStart;
         public Transform keyboardEnd;
 
+        [Header("PlayerUI")]
+        public GameObject WASD;
+        public GameObject WASD_New;
+        public GameObject tbcObject;
+
+        public PlayableDirector director;
+
         public bool debug = false;
 
         private void Start()
@@ -35,6 +43,8 @@ namespace KeyboardWarrior
                     laserStartEffects.Add(particle);
                 }
             }
+
+            director = GetComponent<PlayableDirector>();
 
             if (debug)
             {
@@ -103,6 +113,10 @@ namespace KeyboardWarrior
                 Destroy(go);
             }
             Destroy(newKK);
+            tbcObject.SetActive(true);
+            WASD_New.SetActive(true);
+            WASD.SetActive(false);
+            director.Play();
         }
     }
 }
