@@ -62245,7 +62245,7 @@ MonoBehaviour:
   centerPoint: {fileID: 996909461}
   keyboardStart: {fileID: 26562052}
   keyboardEnd: {fileID: 444938439}
-  debug: 1
+  debug: 0
 --- !u!1 &1200131744
 GameObject:
   m_ObjectHideFlags: 0

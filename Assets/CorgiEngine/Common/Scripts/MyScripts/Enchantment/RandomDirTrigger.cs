@@ -13,19 +13,21 @@ namespace KeyboardWarrior
             foreach (EnchantTrigger trigger in triggers)
             {
                 int rand = Random.Range(0, 4);
+                InteractableObject io = trigger.GetComponent<InteractableObject>();
+                io.returnToDefault = false;
                 switch (rand)
                 {
                     case 0:
-                        trigger.currentEnchant = EnchantType.up;
+                        io.OnEnchant(EnchantType.up);
                         break;
                     case 1:
-                        trigger.currentEnchant = EnchantType.down;
+                        io.OnEnchant(EnchantType.down);
                         break;
                     case 2:
-                        trigger.currentEnchant = EnchantType.left;
+                        io.OnEnchant(EnchantType.left);
                         break;
                     case 3:
-                        trigger.currentEnchant = EnchantType.right;
+                        io.OnEnchant(EnchantType.right);
                         break;
                 }
             }
