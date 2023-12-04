@@ -16998,7 +16998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  targetCount: 2
+  targetCount: 26
   endLevelPortal: {fileID: 3300865161304180358}
 --- !u!1001 &1783339308
 PrefabInstance:
