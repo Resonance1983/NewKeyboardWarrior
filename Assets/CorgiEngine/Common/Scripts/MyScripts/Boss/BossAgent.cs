@@ -37,6 +37,9 @@ namespace KeyboardWarrior
         int letterGenetated = 0;
         public float minPosTime = 0.2f;
 
+        RandomPosTrigger randomPos;
+        RandomDirTrigger randomDir;
+
         [Header("Laser Phase")]
         public float laserPosTime = 1f;
         public float laserPrepTime = 5f;
@@ -53,6 +56,8 @@ namespace KeyboardWarrior
             currentState = defaultState;
             laserController = laserGenerator.GetComponent<LaserController>();
             letterGenerator = typeWriter.GetComponent<LetterGenerator>();
+            randomPos = FindObjectOfType<RandomPosTrigger>();
+            randomDir = FindObjectOfType<RandomDirTrigger>();
             letterGenetated = 0;
             StartCoroutine(IntroProcess());
         }
@@ -97,6 +102,9 @@ namespace KeyboardWarrior
 
         IEnumerator LetterProcess()
         {
+            randomDir.RandomDir();
+            randomPos.RandomPos();
+            yield return new WaitForSeconds(1f);
             for (int i = 0; i < 3 ; i++)
             {
                 letterGenetated++;
