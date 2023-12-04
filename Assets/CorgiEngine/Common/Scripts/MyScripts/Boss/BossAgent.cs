@@ -46,6 +46,7 @@ namespace KeyboardWarrior
         public float laserPosTime = 1f;
         public float laserPrepTime = 5f;
         public float laserLastTime = 3f;
+        public int letterGenerateEachRound = 2;
 
         [Header("Death Phase")]
         public float deathPhaseTime = 5f;
@@ -116,11 +117,11 @@ namespace KeyboardWarrior
             randomDir.RandomDir();
             randomPos.RandomPos();
             yield return new WaitForSeconds(1f);
-            for (int i = 0; i < 3 ; i++)
+            for (int i = 0; i < letterGenerateEachRound; i++)
             {
                 letterGenetated++;
                 letterGenerator.GenerateLetter();
-                yield return new WaitForSeconds(letterPhaseTime/3);
+                yield return new WaitForSeconds(letterPhaseTime/ letterGenerateEachRound);
             }     
             currentState = BossStates.Laser;
             inLetterProcess = false;
@@ -148,14 +149,6 @@ namespace KeyboardWarrior
         {
             yield return null;
             FindObjectOfType<EndGameCutscene>().StartCutscene();
-        }
-
-        void RandomTriggerDirection()
-        {
-            foreach (EnchantTrigger trigger in enchantTriggers)
-            {
-                trigger.RandomDirection();
-            }
         }
 
         public void OnWordForm()
