@@ -111,7 +111,8 @@ namespace KeyboardWarrior
             {
                 if (currentHit.GetComponent<Word>())
                 {
-                    Destroy(currentHit);
+                    if (currentHit.GetComponent<Word>().canDestroy)
+                        Destroy(currentHit);
                 }
                 if (currentHit.GetComponent<Health>())
                 {

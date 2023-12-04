@@ -8,7 +8,7 @@ namespace KeyboardWarrior
     {
         [SerializeField] WordManager wordManager;
         public string letter;
-
+        public bool canDestroy = true;
         private void Start()
         {
             wordManager = FindObjectOfType<WordManager>();
