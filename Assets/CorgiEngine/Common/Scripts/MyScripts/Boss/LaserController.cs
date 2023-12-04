@@ -30,12 +30,12 @@ namespace KeyboardWarrior
                 FillLists();
             }
             DisableLaser();
-            RandomPosition();
-            laserTarget = PlayerManager.Instance.gameObject;
+            RandomPosition();      
         }
 
         private void Update()
         {
+            laserTarget = PlayerManager.Instance.gameObject;
             if (sprite && laserTarget)
             {
                 transform.right = laserTarget.transform.position - transform.position;
