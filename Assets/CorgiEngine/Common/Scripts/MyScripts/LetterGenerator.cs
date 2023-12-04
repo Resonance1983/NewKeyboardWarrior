@@ -16,14 +16,9 @@ namespace KeyboardWarrior
         public void GenerateLetter()
         {
             Word newLetter = new Word();
-            if (letterIndex < letters.Count-1) 
+            if (letterIndex < letters.Count) 
             { 
                 newLetter = Instantiate(letterPrefab, transform.position, Quaternion.identity); 
-            }
-            else if (letterIndex == letters.Count-1)
-            {
-                //newLetter = Instantiate(playerLetter, transform.position, Quaternion.identity);
-                BroadcastMessage("Rickroll");
             }
             newLetter.letter = letters[letterIndex];
         }

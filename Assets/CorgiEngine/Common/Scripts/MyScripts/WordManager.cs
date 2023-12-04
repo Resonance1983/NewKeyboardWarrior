@@ -72,13 +72,5 @@ namespace KeyboardWarrior
         private void Update()
         {
         }
-
-        public void Rickroll()
-        {
-            if (rickrolled) return;
-            audioSource.Stop();
-            audioSource.PlayOneShot(rickroll);
-            rickrolled = true;
-        }
     }
 }
