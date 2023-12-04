@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LevelDesign/StartScreen.unity
+    guid: 9721c7ef142f7e344a1489a52631e2d7
+  - enabled: 1
+    path: Assets/Scenes/LevelDesign/StarWarScene.unity
+    guid: 0ec85a93a70c8bc4bbef3b8e956aaa29
+  - enabled: 1
     path: Assets/Scenes/LevelDesign/Level1.unity
     guid: 4ed5a0e3bb86b8948815442cc5e7e87d
   - enabled: 1
