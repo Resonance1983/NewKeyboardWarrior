@@ -42,7 +42,7 @@ namespace KeyboardWarrior
         private void Update()
         {
             Vector2 velocity = Vector2.zero;
-            Vector2 scale = Vector2.one;
+            //Vector2 scale = Vector2.one;
             switch (currentEnchant)
             {
                 case EnchantType.up:
