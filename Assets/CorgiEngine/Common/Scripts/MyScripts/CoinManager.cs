@@ -9,7 +9,7 @@ namespace KeyboardWarrior
     {
         public int totalCoin = 5;
         private int currentCoin = 0;
-        bool enoughCoinForGoldKeyboard = false;
+        public bool enoughCoinForGoldKeyboard = false;
 
         protected override void Awake()
         {

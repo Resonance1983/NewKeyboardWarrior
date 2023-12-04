@@ -9835,7 +9835,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f0e6ee4ad3fdd1f4ea0c50f72ddc5f49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f557865eb1369f45b652a04414a3939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9862,7 +9862,11 @@ MonoBehaviour:
   muzzle: {fileID: 8428829334663434658}
   startVFX: {fileID: 766361686308927305}
   endVFX: {fileID: 3551142849300032}
+  startParticles: []
   particleSystems: []
+  laserTarget: {fileID: 0}
+  laserPosList: []
+  currentHit: {fileID: 0}
 --- !u!1 &6186075819408622252
 GameObject:
   m_ObjectHideFlags: 0
