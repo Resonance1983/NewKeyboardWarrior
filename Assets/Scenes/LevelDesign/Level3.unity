@@ -11577,7 +11577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &363824903
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -93783,6 +93783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard_Gold
       objectReference: {fileID: 0}
+    - target: {fileID: 653726903444541198, guid: 3c3aadbef287b054ea9897c3572460c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2000092327776329557, guid: 3c3aadbef287b054ea9897c3572460c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -119853,6 +119858,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a52d9028a7a89ee4e8c848615fff8672,
         type: 3}
+    - target: {fileID: 7958041486761874166, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958041486761874166, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958041486761874166, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7999966503264472579, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
       propertyPath: m_Enabled
