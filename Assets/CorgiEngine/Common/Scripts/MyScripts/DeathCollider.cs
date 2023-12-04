@@ -11,9 +11,9 @@ namespace KeyboardWarrior
         public bool realDeathCollider = false;
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (realDeathCollider && collision.gameObject == PlayerManager.Instance.gameObject)
+            if (collision.gameObject.GetComponent<Word>() && collision.gameObject.GetComponent<Word>().canDestroy)
             {
-                
+                Destroy(collision.gameObject);
             }
         }
     }
