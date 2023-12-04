@@ -127,8 +127,8 @@ namespace KeyboardWarrior
 
         IEnumerator DeathProcess()
         {
-            yield return new WaitForSeconds(deathPhaseTime);
-            Destroy(gameObject);
+            yield return null;
+            FindObjectOfType<EndGameCutscene>().StartCutscene();
         }
 
         void RandomTriggerDirection()
