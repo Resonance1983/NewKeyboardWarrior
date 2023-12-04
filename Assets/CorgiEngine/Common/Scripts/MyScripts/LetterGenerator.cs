@@ -23,6 +23,7 @@ namespace KeyboardWarrior
             {
                 if (!generatedCoinCube && CoinCube())
                 {
+                    generatedCoinCube = true;
                     newLetter = Instantiate(coinCubePrefab, startPos.position, Quaternion.identity);
                 }
                 else
