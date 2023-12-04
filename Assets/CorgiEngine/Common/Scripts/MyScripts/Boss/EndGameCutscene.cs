@@ -29,6 +29,8 @@ namespace KeyboardWarrior
         public GameObject tbcObject;
 
         public PlayableDirector director;
+        public AudioClip tbcClip;
+        public AudioSource bgmAudioSource;
 
         public bool debug = false;
 
@@ -61,6 +63,12 @@ namespace KeyboardWarrior
         IEnumerator EndGameProcess()
         {
             // boss fight ends
+            bgmAudioSource.Stop();
+            bgmAudioSource.loop = false;
+            bgmAudioSource.clip = tbcClip;
+            bgmAudioSource.time = 24f;
+            bgmAudioSource.Play();
+            
             boss.SetActive(false);
             yield return new WaitForSeconds(1f);
             // a new KK appears in the center

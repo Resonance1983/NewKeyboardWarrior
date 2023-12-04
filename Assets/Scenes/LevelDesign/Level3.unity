@@ -62843,6 +62843,8 @@ MonoBehaviour:
   WASD_New: {fileID: 600378642}
   tbcObject: {fileID: 1646128836}
   director: {fileID: 0}
+  tbcClip: {fileID: 8300000, guid: 53fcc15ee41fedb46a3e2798769fa797, type: 3}
+  bgmAudioSource: {fileID: 2092361019}
   debug: 1
 --- !u!320 &1198813176
 PlayableDirector:
@@ -79155,7 +79157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1646128837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -104562,6 +104564,12 @@ Transform:
   - {fileID: 1287047970}
   m_Father: {fileID: 914879927}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2092361019 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7778688657017679677, guid: 40e450171e2e87449945c9bcf25581a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 671050799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2095618303
 PrefabInstance:
   m_ObjectHideFlags: 0
