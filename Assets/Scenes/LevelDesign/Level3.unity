@@ -120752,6 +120752,11 @@ PrefabInstance:
       objectReference: {fileID: 252407916}
     - target: {fileID: 5017352194770906339, guid: bbb3dbf35e0a71244906ce5d602fb50a,
         type: 3}
+      propertyPath: bgmSource
+      value: 
+      objectReference: {fileID: 2092361019}
+    - target: {fileID: 5017352194770906339, guid: bbb3dbf35e0a71244906ce5d602fb50a,
+        type: 3}
       propertyPath: laserPosTime
       value: 0.3
       objectReference: {fileID: 0}
