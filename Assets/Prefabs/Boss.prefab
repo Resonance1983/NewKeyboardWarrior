@@ -134,16 +134,25 @@ MonoBehaviour:
   defaultState: 0
   currentState: 0
   bossHealth: 5
+  introKK: {fileID: 0}
+  bgmSource: {fileID: 0}
+  rickrollClip: {fileID: 0}
+  duelClip: {fileID: 0}
+  mechanicList: {fileID: 0}
   typeWriter: {fileID: 6740172354033285273}
   laserGenerator: {fileID: 8973939471882645365}
+  playerDialogue: {fileID: 0}
   laserController: {fileID: 0}
   letterGenerator: {fileID: 0}
   introPhaseTime: 0
   letterPhaseTime: 5
+  minPosTime: 0.2
   laserPosTime: 1
   laserPrepTime: 5
   laserLastTime: 3
+  letterGenerateEachRound: 2
   deathPhaseTime: 5
+  enchantTriggers: []
 --- !u!1 &3930664371572079047
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +283,7 @@ GameObject:
   - component: {fileID: 7958041486761874166}
   - component: {fileID: 303456494327282550}
   - component: {fileID: 1051273228771584168}
+  - component: {fileID: 5947739368723153463}
   m_Layer: 0
   m_Name: typewriter
   m_TagString: Untagged
@@ -365,6 +375,7 @@ MonoBehaviour:
     audio: {fileID: 0}
   destroyDelay: 1
   rickroll: {fileID: 0}
+  wordMatchFeedbacks: []
 --- !u!114 &1051273228771584168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,9 +388,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ea682d87324240bf77770d746acbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPrefab: {fileID: 2489335638138448885, guid: 2ab1fbb4faca9e84d83eeedb4fcfc3d2,
-    type: 3}
-  playerLetter: {fileID: 0}
+  letterPrefab: {fileID: 0}
+  coinCubePrefab: {fileID: 0}
+  startPos: {fileID: 0}
   letters:
   - A
   - B
@@ -387,6 +398,27 @@ MonoBehaviour:
   letterIndex: 0
   levelEnd: 0
   generateInterval: 3
+--- !u!95 &5947739368723153463
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740172354033285273}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 286a4c712bfcbdf4a8e7ce4e38525d11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7324133675020092294
 GameObject:
   m_ObjectHideFlags: 0
