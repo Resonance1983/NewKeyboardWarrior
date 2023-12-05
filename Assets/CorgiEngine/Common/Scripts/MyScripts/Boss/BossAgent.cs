@@ -178,7 +178,7 @@ namespace KeyboardWarrior
 
         IEnumerator DeathProcess()
         {
-            yield return null;
+            yield return new WaitForSeconds(1.5f);
             FindObjectOfType<EndGameCutscene>().StartCutscene();
         }
 
