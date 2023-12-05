@@ -111,7 +111,11 @@ namespace KeyboardWarrior
         {
             if (bossHealth <= 0)
             {
+                if (inDeathProcess) return;
                 currentState = BossStates.Death;
+                inDeathProcess = true;
+                StopAllCoroutines();
+                StartCoroutine(DeathProcess());
             }
             if (inLaserProcess || inLetterProcess || inDeathProcess)
             {
